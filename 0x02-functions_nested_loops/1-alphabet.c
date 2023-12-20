@@ -1,15 +1,20 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- *print_alphabet - Function to print letters from a-z
+ * print_alphabet - Entry point
+ * Return:0
  */
 
 void print_alphabet(void)
 {
-	int i;
+	char c = 'a';
 
-	for (i = 97; i <= 122; i++)
-		_putchar(i);
+	while (c <= 'z')
+	{
+		_putchar(c);
+		c++;
+
+	}
 	_putchar('\n');
+
 }

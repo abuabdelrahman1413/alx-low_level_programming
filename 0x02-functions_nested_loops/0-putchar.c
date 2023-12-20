@@ -1,11 +1,9 @@
-#include <stdio.h>
 #include "main.h"
-/**
- * main - entry point
- * @void
- * Return: 0 for success
- */
 
+/**
+ * main -  prints _putchar, followed by a new line
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	_putchar('_');
