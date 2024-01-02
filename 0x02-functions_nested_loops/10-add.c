@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * add - adds two integers and returns the result
@@ -13,4 +13,13 @@ int add(int a, int b)
 	c = a + b;
 
 	return (c);
+}
+
+int main(void)
+{
+    int n;
+
+    n = add(89, 9);
+    printf("%d\n", n);
+    return (0);
 }

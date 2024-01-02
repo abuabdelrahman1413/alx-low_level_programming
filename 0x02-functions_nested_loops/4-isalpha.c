@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * _isalpha - checks for alphabetic character
@@ -8,4 +8,21 @@
 int _isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+}
+
+
+int main(void)
+{
+    int r;
+
+    r = _isalpha('H');
+    putchar(r + '0');
+    r = _isalpha('o');
+    putchar(r + '0');
+    r = _isalpha(108);
+    putchar(r + '0');
+    r = _isalpha(';');
+    putchar(r + '0');
+    putchar('\n');
+    return (0);
 }
