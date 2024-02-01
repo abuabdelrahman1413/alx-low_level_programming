@@ -10,6 +10,13 @@
  * Description: singly linked list node structure
  * for Holberton project
  */
+/*Include libraries*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <stdarg.h>
+
 typedef struct list_s
 {
 	char *str;
