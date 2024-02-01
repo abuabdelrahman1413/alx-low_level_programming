@@ -1,5 +1,7 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "lists.h"
-
 /**
 * print_list - print Count of nodes
 * @h: pointer to first element
