@@ -29,4 +29,3 @@ def island_perimeter(grid):
                 if j != 0 and grid[i][j - 1] == 1:
                     connections += 1
     return perimeter - (connections * 2)
-
