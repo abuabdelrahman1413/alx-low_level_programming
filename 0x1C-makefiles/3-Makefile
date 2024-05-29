@@ -1,25 +1,24 @@
 # Variables
 CC = gcc
-SRC = $(wildcard *.c)
+SRC =main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 
 # Rules
-all: $(NAME)
+# recompile only updated sources files
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) -o $@ $(OBJ)
-
-%.o: %.c
-	$(CC) -c $< -o $@
-
+# deletes all object files and Emacs and vim tem file s and exec file
 clean:
 	$(RM) $(NAME) *~
 
+# delets all object files
 oclean:
 	$(RM) $(OBJ)
 
+# delets all object files and Emacs and vim tem files and executable 
 fclean: clean oclean
 
 re: fclean all
