@@ -1,4 +1,8 @@
-SRC:= main.c school.c
-CC:= gcc
+# Variables
+SRC := main.c school.c
+CC := gcc
+NAME := school
+
+# Rule to build the executable
 all:
-	$(CC) $(SRC) -o school
+	$(CC) $(SRC) -o $(NAME)
