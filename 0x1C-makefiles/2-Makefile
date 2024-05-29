@@ -2,7 +2,7 @@ SRC:= main.c school.c
 OBJ:= main.o school.o
 CC:= gcc
 NAME:= school
-all:
+all: $(SRC)
 	$(CC) -c -o $(word 1,$(OBJ)) $(word 1,$(SRC))
 	$(CC) -c -o $(word 2,$(OBJ)) $(word 2,$(SRC))
 	$(CC) $(OBJ) -o $(NAME)
