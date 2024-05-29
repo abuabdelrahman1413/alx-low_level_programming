@@ -6,3 +6,4 @@ NAME := school
 # Rule to build the executable
 all:
 	$(CC) $(SRC) -o $(NAME)
+
