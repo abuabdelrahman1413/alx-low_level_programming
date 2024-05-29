@@ -1,9 +1,10 @@
+# Variables
 SRC= main.c school.c
 OBJ= $(SRC:.c=.o)
-$(OBJ): %.o: %.c
 CC= gcc
 NAME= school
-all: $(SRC)
-	$(CC) -c -o $(word 1,$(OBJ)) $(word 1,$(SRC))
-	$(CC) -c -o $(word 2,$(OBJ)) $(word 2,$(SRC))
-	$(CC) $(OBJ) -o $(NAME)
+all: $(NAME)
+	$(NAME):$(OBJ)
+		$(CC) $(OBJ) -o $(NAME)
+%.o: %.c
+	$(CC) -c $< -o $@
