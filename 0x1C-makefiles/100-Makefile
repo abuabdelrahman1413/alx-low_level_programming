@@ -1,24 +1,54 @@
+# # Variables
+# CC = gcc
+# SRC =main.c school.c
+# OBJ = $(SRC:.c=.o)
+# NAME = school
+# RM = rm -f
+# CFLAGS = -Wall -Werror -Wextra -pedantic
+# # Rules
+# # recompile only updated sources files
+# all: $(OBJ)
+# 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+#
+# # deletes all object files and Emacs and vim tem file s and exec file
+# clean:
+# 	$(RM) $(NAME) *~
+#
+# # delets all object files
+# oclean:
+# 	$(RM) $(OBJ)
+#
+# # delets all object files and Emacs and vim tem files and executable 
+# fclean: clean oclean
+#
+# re: fclean all
+#
+
 # Variables
 CC = gcc
-SRC =main.c school.c
-OBJ = $(SRC:.c=.o)
+SRC = main.c school.c
+OBJ = main.o school.o
 NAME = school
 RM = rm -f
-CFLAGS = -Wall -Werror -Wextra -pedantic
-# Rules
-# recompile only updated sources files
-all: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-# deletes all object files and Emacs and vim tem file s and exec file
+# Rules
+all: $(NAME)
+
+$(NAME): $(OBJ) m.h
+	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
+
+main.o: main.c m.h
+	$(CC) -Wall -Werror -Wextra -pedantic -c main.c -o main.o
+
+school.o: school.c m.h
+	$(CC) -Wall -Werror -Wextra -pedantic -c school.c -o school.o
+
 clean:
 	$(RM) $(NAME) *~
 
-# delets all object files
 oclean:
 	$(RM) $(OBJ)
 
-# delets all object files and Emacs and vim tem files and executable 
 fclean: clean oclean
 
 re: fclean all
