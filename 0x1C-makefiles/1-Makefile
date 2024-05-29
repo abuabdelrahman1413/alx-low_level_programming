@@ -1,6 +1,6 @@
 # Variables
-SRC := $(wildcard *.c)
 CC := gcc
+SRC := $(wildcard *.c)
 
 # Rule to build the executable
 all:
