@@ -1,9 +1,7 @@
 # Variables
-SRC := main.c school.c
+SRC := $(wildcard *.c)
 CC := gcc
-NAME := school
 
 # Rule to build the executable
 all:
-	$(CC) $(SRC) -o $(NAME)
-
+	$(CC) $(SRC) -o school
