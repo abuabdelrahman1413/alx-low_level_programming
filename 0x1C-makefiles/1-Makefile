@@ -5,3 +5,4 @@ CC := gcc
 # Rule to build the executable
 all:
 	$(CC) $(SRC) -o school
+
