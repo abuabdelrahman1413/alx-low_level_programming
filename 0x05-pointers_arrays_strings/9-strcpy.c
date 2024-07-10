@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * *_strcpy - copies the string pointed to by src
@@ -11,20 +12,26 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int len, i;
 
-	len = 0;
 
-	while (src[len] != '\0')
+	while (*src != '\0')
 	{
-		len++;
+		*dest++ = *src++;
 	}
-
-	for (i = 0; i < len; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
 
 	return (dest);
 }
+
+/*int main() {
+    char src[] = "Hello, world!";
+    char dest[50]; // Make sure dest has enough space to hold the copied string
+
+    // Call _strcpy to copy src to dest
+    _strcpy(dest, src);
+
+    // Print the copied string in dest
+    printf("Copied string: %s\n", dest);
+
+    return 0;
+}*/
+
